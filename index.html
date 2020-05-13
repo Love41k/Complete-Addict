@@ -10,36 +10,66 @@
 	<link href="/Complete-Addict/stylesheets/mobile.css"  rel="stylesheet" >
 	<link href="/Complete-Addict/stylesheets/non-screen.css" rel="stylesheet" >
 
+	<link href='/Complete-Addict/calendar/core/main.css' rel='stylesheet' />
+	<link href='/Complete-Addict/calendar/daygrid/main.css' rel='stylesheet' />
+
+	<script src='/Complete-Addict/calendar/core/main.js'></script>
+	<script src='/Complete-Addict/calendar/daygrid/main.js'></script>
 	<script type="text/javascript" src="/Complete-Addict/js/modernizr.js"></script>
 	<script type="text/javascript" src="/Complete-Addict/js/headsmart.min.js"></script>
+
+	<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: [ 'dayGrid' ]
+            });
+
+            calendar.render();
+        });
+	</script>
 
 </head>
 <body>
 	<section><div class="testclass" id="testclass">ыцfdfdаццdk.jbehgruуапц</div></section>
 
-	---
-	layout: default
-	---
-
-	Text can be **bold**, _italic_, or ~~strikethrough~~.
-
-	[Link to another page](./another-page.html).
-
-	There should be whitespace between paragraphs.
-
-	There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
+	----
 	# Header 1
-
-	This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-	## Header 2
-
-	> This is a blockquote following a header.
-	>
-	> When something is important enough, you do it even if the odds are not in your favor.
-
+	<div id='calendar'></div>
 	### Header 3
 
+	<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+	<!-- The Modal -->
+	<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+		class="close" title="Close Modal">&times;</span>
+
+		<!-- Modal Content -->
+		<form class="modal-content animate" action="/action_page.php">
+			<div class="imgcontainer">
+				<img src="img_avatar2.png" alt="Avatar" class="avatar">
+			</div>
+
+			<div class="container">
+				<label for="uname"><b>Username</b></label>
+				<input type="text" placeholder="Enter Username" name="uname" required>
+
+				<label for="psw"><b>Password</b></label>
+				<input type="password" placeholder="Enter Password" name="psw" required>
+
+				<button type="submit">Login</button>
+				<label>
+					<input type="checkbox" checked="checked" name="remember"> Remember me
+				</label>
+			</div>
+
+			<div class="container" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				<span class="psw">Forgot <a href="#">password?</a></span>
+			</div>
+		</form>
+	</div>
 </body>
 </html>
