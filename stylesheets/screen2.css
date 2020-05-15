@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 8, ../sass/screen2.scss */
 body {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 
 /* line 13, ../sass/screen2.scss */

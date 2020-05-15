@@ -12,23 +12,75 @@
 
 	<link href='/Complete-Addict/calendar/core/main.css' rel='stylesheet' />
 	<link href='/Complete-Addict/calendar/daygrid/main.css' rel='stylesheet' />
+	<script src='/Complete-Addict/calendar/timegrid/main.css'></script>
 
 	<script src='/Complete-Addict/calendar/core/main.js'></script>
+	<script src='/Complete-Addict/calendar/interaction/main.js'></script>
+	<script src='/Complete-Addict/calendar/interaction/main.min.js'></script>
+	<script src='/Complete-Addict/calendar/timegrid/main.js'></script>
+	<script src='/Complete-Addict/calendar/timegrid/main.min.js'></script>
+
 	<script src='/Complete-Addict/calendar/daygrid/main.js'></script>
+
 	<script type="text/javascript" src="/Complete-Addict/js/modernizr.js"></script>
 	<script type="text/javascript" src="/Complete-Addict/js/headsmart.min.js"></script>
 
-	<script>
 
+	<link href="https://unpkg.com/@fullcalendar/core@4.4.0/main.min.css" rel="stylesheet">
+
+	<link href="https://unpkg.com/@fullcalendar/daygrid@4.4.0/main.min.css" rel="stylesheet">
+
+	<link href="https://unpkg.com/@fullcalendar/timegrid@4.4.0/main.min.css" rel="stylesheet">
+
+	<script src="https://unpkg.com/@fullcalendar/core@4.4.0/main.min.js"></script>
+
+	<script src="https://unpkg.com/@fullcalendar/interaction@4.4.0/main.min.js"></script>
+
+	<script src="https://unpkg.com/@fullcalendar/daygrid@4.4.0/main.min.js"></script>
+
+	<script src="https://unpkg.com/@fullcalendar/timegrid@4.4.0/main.min.js"></script>
+
+	<script>
 
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
+            var Draggable = FullCalendarInteraction.Draggable;
+
+            var containerEl = document.getElementById('external-events');
+
+
+            new Draggable(containerEl, {
+                itemSelector: '.fc-event',
+                eventData: function(eventEl) {
+                    return {
+                        title: eventEl.innerText
+                    };
+                }
+            });
+
+            import { Calendar } from '@fullcalendar/core';
+            import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
+
+            document.addEventListener('DOMContentLoaded', function() {
+                let draggableEl = document.getElementById('mydraggable');
+                let calendarEl = document.getElementById('mycalendar');
+
+                let calendar = new Calendar(calendarEl, {
+                    plugins: [ interactionPlugin ],
+                    droppable: true
+                });
+                calendar.render();
+                new Draggable(draggableEl);
+
+            });
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: [ 'dayGrid' ]
+                plugins: [ 'interaction', 'dayGrid', 'timeGrid' ]
+                schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source'
             });
 
             calendar.render();
+
         });
 	</script>
 
