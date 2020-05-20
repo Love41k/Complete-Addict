@@ -577,7 +577,7 @@ TODO: more distinction between this file and common.css
 }
 
 .fc-unthemed td.fc-today {
-  background: #fcf8e3;
+  background: #e6e2ff;
 }
 
 .fc-unthemed .fc-disabled-day {
@@ -690,7 +690,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
-  padding: 0.4em 0.65em;
+  padding: 0.1em 0.35em;
   font-size: 1em;
   line-height: 1.5;
   border-radius: 0.25em;
@@ -817,7 +817,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 }
 
 .fc-toolbar.fc-header-toolbar {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .fc-toolbar.fc-footer-toolbar {

@@ -12,12 +12,12 @@
 
 	<link href='/Complete-Addict/calendar/core/main.css' rel='stylesheet' />
 	<link href='/Complete-Addict/calendar/daygrid/main.css' rel='stylesheet' />
-	<script href='/Complete-Addict/calendar/timegrid/main.css' rel='stylesheet'></script>
+	<link href='/Complete-Addict/calendar/timegrid/main.css' rel='stylesheet' />
 
 	<script src='/Complete-Addict/calendar/core/main.js'></script>
-	<script src='fullcalendar/core/locales-all.js'></script>
+	<script src='/Complete-Addict/calendar/core/locales-all.js'></script>
 
-	<script src='/Complete-Addict/calendar/core/locales/en.js'></script>
+	<script src='/Complete-Addict/calendar/core/locales/en-gb.js'></script>
 	<script src='/Complete-Addict/calendar/core/locales/uk.js'></script>
 	<script src='/Complete-Addict/calendar/core/locales/ru.js'></script>
 	<script src='/Complete-Addict/calendar/interaction/main.js'></script>
@@ -25,7 +25,7 @@
 	<script src='/Complete-Addict/calendar/timegrid/main.js'></script>
 	<script src='/Complete-Addict/calendar/timegrid/main.min.js'></script>
 	<script src='/Complete-Addict/calendar/daygrid/main.js'></script>
-	<script type="text/javascript" src="/Complete-Addict/js/modernizr.js"></script>
+	<script src="/Complete-Addict/js/modernizr.js"></script>
 
 	<script>
 
@@ -51,24 +51,29 @@
                         click: function() {
                             var dateStr = prompt('Enter a date in YYYY-MM-DD format');
                             var date = new Date(dateStr + 'T00:00:00'); // will be in local time
+							var title = prompt('Enter title');
 
                             if (!isNaN(date.valueOf())) { // valid?
                                 calendar.addEvent({
-                                    title: 'dynamic event',
+                                    title: title,
                                     start: date,
-                                    allDay: true
+                                    allDay: true,
+									target: "_blank",
+									url: "http://www.google.com/calendar/event?action=TEMPLATE" +
+									"&text=" + title +
+									"&dates=[start-custom format='Ymd\\THi00\\Z']/[end-custom format='Ymd\\THi00\\Z']" +
+									"&details=[description]" +
+									"&location=[location]" +
+									"&trp=false&sprop=&sprop=name:"
                                 });
                                 alert('Great. Now, update your database...');
                             } else {
-                                alert('Invalid date.');
+                                alert('Ti Invalid');
                             }
                         }
                     }
                 }
             });
-
-            calendar.render();
-            new Draggable(draggableEl);
 
             // build the locale selector's options
             calendar.getAvailableLocaleCodes().forEach(function(localeCode) {
@@ -85,40 +90,26 @@
                     calendar.setOption('locale', this.value);
                 }
             });
+            calendar.render();
+
         });
 	</script>
 
 
 </head>
 <body>
-	<section><div class="testclass">Complete-Addict Locales:
-		<select id='locale-selector'></select></div></section>
+	<section class="header"><div class="testclass">Complete-Addict </div>
+		<div class="locales">Locales:
+		<select id='locale-selector'></select>
+		</div>
+	</section>
 
 	<div id='calendar'></div>
 
-	<div id='draggable-el' data-event='{ "title": "my event", "duration": "02:00" }'>drag me</div>
-	### Header 3
 	<iframe class="bored" src="https://www.boredbutton.com/">
 	</iframe>
 
-    <script>
-		import { Calendar } from '@fullcalendar/core';
-    import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
 
-    document.addEventListener('DOMContentLoaded', function() {
-        let draggableEl = document.getElementById('mydraggable');
-        let calendarEl = document.getElementById('mycalendar');
-
-        let calendar = new Calendar(calendarEl, {
-            plugins: [ interactionPlugin ],
-            droppable: true
-        });
-
-        calendar.render();
-
-        new Draggable(draggableEl);
-    });
-	</script>
 	<a href="http://www.google.com/calendar/event?action=TEMPLATE&text=[event-title]&dates=[start-custom format='Ymd\\THi00\\Z']/[end-custom format='Ymd\\THi00\\Z']&details=[description]&location=[location]&trp=false&sprop=&sprop=name:" target="_blank" rel="nofollow">Add to my calendar</a>
 
 </body>
