@@ -6,11 +6,15 @@
 @import "compass/reset";
 
 body {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto !important;
 }
 
 .testclass {
   font-style: italic;
   font-size: 2rem;
+}
+.bored {
+  width: 25%;
+  height: 800px;
 }
