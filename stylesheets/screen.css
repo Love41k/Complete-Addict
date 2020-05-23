@@ -162,13 +162,13 @@ header span.left-tail, header span.right-tail {
 /* line 164, ../sass/screen.scss */
 header span.left-tail {
   background-position: 0 0;
-  left: -31px;
+  left: -37px;
 }
 
 /* line 169, ../sass/screen.scss */
 header span.right-tail {
   background-position: -56px 0;
-  right: -31px;
+  right: -37px;
 }
 
 /* line 174, ../sass/screen.scss */

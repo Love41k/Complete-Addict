@@ -88,9 +88,34 @@ body {
 .bored body {
   overflow: hidden;
 }
-
 /* line 22, ../sass/screen2.scss */
+.bored body :hover {
+  overflow: hidden;
+}
+
+/* line 26, ../sass/screen2.scss */
 .header {
   display: flex;
   justify-content: space-between;
+}
+
+/* line 30, ../sass/screen2.scss */
+.locales {
+  position: relative;
+  top: -30px;
+}
+
+@media only screen and (max-width: 800px) {
+  /* line 37, ../sass/screen2.scss */
+  .header {
+    font-size: 6vw;
+  }
+  /* line 40, ../sass/screen2.scss */
+  .header .testclass {
+    font-size: 6vw;
+  }
+  /* line 43, ../sass/screen2.scss */
+  .header .locale-selector {
+    font-size: 4vw;
+  }
 }

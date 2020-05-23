@@ -142,7 +142,7 @@ header span.ribbon-inner {
   z-index: 1;
 }
 
-header span.left-tail, header span.right-tail {
+/*header span.left-tail, header span.right-tail {
   position: relative;
   display: block;
   width: 19px;
@@ -161,11 +161,11 @@ header span.left-tail {
 header span.right-tail {
   background-position: -19px 0;
   right: 0;
-}
+}*/
 
 header h1 {
   background-color: #7c334f;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bolder;
   font-style: normal;
   text-transform: uppercase;
@@ -177,7 +177,7 @@ header h1 {
 
 header h2 {
   background-color: #7c334f;
-  font: bold italic .85em/1.5 Georgia, Times, “Times New Roman”, serif;
+  font: bold italic .55em/1.5 Georgia, Times, “Times New Roman”, serif;
   color: #e69b95;
   padding-bottom: 14px;
   margin-top: -3px;

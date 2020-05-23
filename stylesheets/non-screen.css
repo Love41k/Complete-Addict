@@ -18,7 +18,7 @@ header span.ribbon-inner {
   padding: 6px;
 }
 
-header span.left-tail, header span.right-tail {
+/*header span.left-tail, header span.right-tail {
   width: 19px;
   height: 10px;
   background: transparent url(../images/ribbon-tail-sprite-2x.png) 0 0 no-repeat;
@@ -32,10 +32,10 @@ header span.left-tail {
 header span.right-tail {
   background-position: -19px 0;
   right: 0;
-}
+}*/
 
 header h1 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 section#downloads {
@@ -43,6 +43,7 @@ section#downloads {
   width: 602px;
   margin: 51px auto -250px;
   background: transparent url(../images/shield.png) center 0 no-repeat;
+  z-index: -1;
 }
 
 section#downloads a {

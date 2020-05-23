@@ -27,12 +27,11 @@
             week: "Неделя",
             day: "День",
             list: "Повестка дня",
-            addEventButton: "stht",
-            addEvent: "stht",
-            customButtons: "afaef"
+            addEventButton: "qerqwe"
+
         },
         weekLabel: "Нед",
-        addEventButton: "sedthne",
+        addEventButton: "qerqwe",
         allDayText: "Весь день",
         eventLimitText: function (n) {
             return "+ ещё " + n;
@@ -54,11 +53,9 @@
             week: "Тиждень",
             day: "День",
             list: "Порядок денний",
-            addEventButton: "tht",
-            addEvent: "sthgt",
-            customButtons: "afaef"
+            addEventButton: "qerqwe"
         },
-        addEventButton: "sedthne",
+        addEventButton: "qerqwe",
         weekLabel: "Тиж",
         allDayText: "Увесь день",
         eventLimitText: function (n) {
