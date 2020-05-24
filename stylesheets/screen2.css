@@ -102,20 +102,25 @@ body {
 /* line 30, ../sass/screen2.scss */
 .locales {
   position: relative;
-  top: -30px;
+  top: -20px;
+  height: 10px;
 }
 
 @media only screen and (max-width: 800px) {
-  /* line 37, ../sass/screen2.scss */
+  /* line 38, ../sass/screen2.scss */
   .header {
     font-size: 6vw;
   }
-  /* line 40, ../sass/screen2.scss */
+  /* line 41, ../sass/screen2.scss */
   .header .testclass {
     font-size: 6vw;
   }
-  /* line 43, ../sass/screen2.scss */
+  /* line 44, ../sass/screen2.scss */
   .header .locale-selector {
     font-size: 4vw;
   }
+}
+/* line 50, ../sass/screen2.scss */
+#ad, #social, .footer {
+  display: none;
 }

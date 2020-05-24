@@ -27,11 +27,9 @@
             week: "Неделя",
             day: "День",
             list: "Повестка дня",
-            addEventButton: "qerqwe"
-
+            addEventButton: '+ событие'
         },
         weekLabel: "Нед",
-        addEventButton: "qerqwe",
         allDayText: "Весь день",
         eventLimitText: function (n) {
             return "+ ещё " + n;
@@ -53,7 +51,7 @@
             week: "Тиждень",
             day: "День",
             list: "Порядок денний",
-            addEventButton: "qerqwe"
+            addEventButton: "Додати подію"
         },
         addEventButton: "qerqwe",
         weekLabel: "Тиж",

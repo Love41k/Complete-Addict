@@ -33,14 +33,19 @@
 
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
+                defaultView: 'dayGridMonth',
                 aspectRatio: 1.5,
                 locale: initialLocaleCode,
-				plugins: [ 'dayGrid', 'interaction' ],
+				plugins: [ 'dayGrid', 'interaction', 'timeGrid' ],
                 editable: true,
                 droppable: true,
                 header: {
-                    center: 'addEventButton'
+                    left: 'dayGridMonth,timeGridWeek,timeGridDay',
+                    center: ' title'
                 },
+				footer: {
+                    center:'addEventButton'
+				},
                 customButtons: {
                     addEventButton: {
                         text: 'add event...',
@@ -64,7 +69,7 @@
                                 });
                                 alert('Great. Now, update your database...');
                             } else {
-                                alert('Ti Invalid');
+                                alert('Invalid data');
                             }
                         }
                     }
@@ -107,7 +112,6 @@
 </header>
 <section id="downloads">
           <span class="inner">
-            <a href="https://github.com/pages-themes/merlot/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/pages-themes/merlot/tarball/master" class="tgz"><em>download</em> .TGZ</a>
           </span>
 </section>
 <span class="banner-fix"></span>
@@ -118,7 +122,7 @@
 		</div>
 	</section>
 
-	<div id='calendar'></div>
+	<div id='calendar' class="header-level-2"></div>
 
 	<iframe class="bored" src="https://www.boredbutton.com/">
 	</iframe>

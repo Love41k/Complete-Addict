@@ -17,9 +17,11 @@
             month: "Місяць",
             week: "Тиждень",
             day: "День",
-            list: "Порядок денний"
+            list: "Порядок денний",
+            addEventButton: "qerqwe"
         },
         weekLabel: "Тиж",
+        addEventButton: "qerqwe",
         allDayText: "Увесь день",
         eventLimitText: function (n) {
             return "+ще " + n + "...";

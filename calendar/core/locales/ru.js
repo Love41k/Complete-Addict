@@ -17,9 +17,19 @@
             month: "Месяц",
             week: "Неделя",
             day: "День",
-            list: "Повестка дня"
+            list: "Повестка дня",
+            customButtons: {
+                addEventButton: {
+                    text: 'qerqwe'
+                }
+            }
         },
         weekLabel: "Нед",
+        customButtons: {
+            addEventButton: {
+                text: 'qerqwe'
+            }
+        },
         allDayText: "Весь день",
         eventLimitText: function (n) {
             return "+ ещё " + n;
